@@ -2,6 +2,7 @@ import { Hero } from "@/components/Hero";
 import { TrustStats } from "@/components/TrustStats";
 import { PracticeAreas } from "@/components/PracticeAreas";
 import { Commitment } from "@/components/Commitment";
+import { AboutAttorney } from "@/components/AboutAttorney";
 import { WhyUs } from "@/components/WhyUs";
 import { Testimonials } from "@/components/Testimonials";
 import { Steps } from "@/components/Steps";
@@ -20,6 +21,7 @@ export default function Home() {
       <TrustStats />
       <PracticeAreas />
       <Commitment />
+      <AboutAttorney />
       <WhyUs />
       <Testimonials />
       <Steps />

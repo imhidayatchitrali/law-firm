@@ -7,7 +7,7 @@ import { IconBuilding } from "@/components/icons";
 
 const stats = [
   { value: "[X],000+", label: "5-Star Reviews" },
-  { value: "[XX]+", label: "Years in Business" },
+  { value: "17+", label: "Years of Experience" },
   { value: "[XX]+", label: "Office Locations" },
   { value: "[XX]+", label: "Attorneys" },
 ];

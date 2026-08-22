@@ -5,23 +5,19 @@ import { siteConfig } from "@/lib/site-config";
 export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 bg-white">
-      <div className="flex items-center py-5 md:py-6">
+      <div className="flex items-center py-3 md:py-4">
         <Link
           href="/"
           aria-label={siteConfig.name}
-          className="relative block h-12 w-62.25 shrink-0 md:h-13.5 md:w-70 left-12"
+          className="relative block shrink-0 left-12"
         >
-          {/* Drop your logo file at public/images/logo.svg (or .png) — sized to
-              match a 280x54 logo at its native resolution (no upscaling). For a
-              crisp look on Retina/HiDPI screens, use a 2x-3x resolution source
-              (e.g. 560x108 or 840x162) or, ideally, an SVG. */}
           <Image
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt={siteConfig.name}
-            fill
+            width={537}
+            height={403}
             priority
-            sizes="(min-width: 768px) 280px, 249px"
-            className="object-contain object-left"
+            className="h-16 w-auto md:h-20"
           />
         </Link>
       </div>

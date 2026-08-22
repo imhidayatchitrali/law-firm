@@ -85,7 +85,7 @@ export const steps: Step[] = [
   },
   {
     num: "06",
-    title: "Call Roy Law",
+    title: "Call Abbo Law",
     desc: "The sooner we start, the stronger your case becomes.",
     icon: <IconCheck className="h-5 w-5" />,
   },
@@ -125,7 +125,7 @@ export type Faq = { q: string; a: string };
 
 export const faqs: Faq[] = [
   {
-    q: "How long do I have to file a personal injury claim in [Your State]?",
+    q: "How long do I have to file a personal injury claim in Florida?",
     a: "Filing deadlines vary by state and case type. Waiting can hurt your case, so it's best to speak with an attorney early to confirm your deadline.",
   },
   {
@@ -133,7 +133,7 @@ export const faqs: Faq[] = [
     a: "In many states, yes — you can still recover damages even if you share some fault, as long as you are not majority responsible. Rules vary by state.",
   },
   {
-    q: "How much does it cost to hire Roy Law?",
+    q: "How much does it cost to hire Abbo Law?",
     a: "Nothing up front. We work on a contingency basis, so you pay no fees unless we win your case.",
   },
   {
@@ -190,3 +190,28 @@ export const shortReviews: Testimonial[] = [
 ];
 
 export const pressLogos: string[] = ["[Press Logo]", "[Press Logo]", "[Press Logo]", "[Press Logo]"];
+
+export type AttorneyBio = {
+  name: string;
+  credential: string;
+  summary: string;
+  highlights: string[];
+  education: { degree: string; school: string }[];
+};
+
+export const attorneyBio: AttorneyBio = {
+  name: "Patrick A. Abbo",
+  credential: "Member, Florida Bar",
+  summary:
+    "With 17+ years in plaintiff personal injury practice, Patrick Abbo has built his career on skilled negotiation, thorough research, and persuasive writing — equally at home preparing an appellate brief as negotiating directly with insurance adjusters and risk managers to secure the strongest possible pre-suit settlement.",
+  highlights: [
+    "Handled medical malpractice pre-suit matters, including birth trauma and nursing home negligence cases, from intake through settlement.",
+    "Represented injured clients in auto and motorcycle crash claims, managing every stage from initial case evaluation and medical treatment coordination through demand package preparation and insurance negotiation.",
+    "Led a pre-litigation department, training and supervising a team of paralegals on demand writing and negotiation strategy while personally handling PIP and BI/UM/UIM claims.",
+    "Extensive experience in legal research, trial preparation, and appellate briefing across medical malpractice, premises liability, and auto accident cases.",
+  ],
+  education: [
+    { degree: "Juris Doctor", school: "Barry University School of Law, Orlando, FL" },
+    { degree: "B.A., Liberal Studies", school: "Barry University, Miami, FL" },
+  ],
+};
