@@ -25,7 +25,7 @@ export function Hero() {
               {siteConfig.state} Personal Injury Attorneys
             </h1>
             <p className="font-serif text-2xl leading-snug font-bold text-gold md:text-3xl">
-              Over $[X] Million+ Recovered.
+               Millions Recovered.
               <br />
               No Fees Until We Win.
             </p>
@@ -38,7 +38,7 @@ export function Hero() {
               of justice &mdash; and we don&apos;t get paid unless you do.
             </p>
             <p className="font-bold text-navy">
-              We&apos;ve recovered more than $[X] million for our clients.
+              We&apos;ve recovered more than millions for our clients.
             </p>
           </div>
 

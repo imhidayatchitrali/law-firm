@@ -1,15 +1,14 @@
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
-import { Stat } from "@/components/ui/Stat";
 import { PlaceholderPhoto } from "@/components/ui/PlaceholderPhoto";
-import { IconBuilding } from "@/components/icons";
+import { IconBuilding, IconClock, IconUsers, IconStar } from "@/components/icons";
 
-const stats = [
-  { value: "[X],000+", label: "5-Star Reviews" },
-  { value: "17+", label: "Years of Experience" },
-  { value: "[XX]+", label: "Office Locations" },
-  { value: "[XX]+", label: "Attorneys" },
+const highlights = [
+  { icon: <IconStar className="h-5 w-5" />, text: "5-star reviews from our clients" },
+  { icon: <IconBuilding className="h-5 w-5" />, text: "Conveniently located in Orlando" },
+  { icon: <IconClock className="h-5 w-5" />, text: "Experience that counts and gets results" },
+  { icon: <IconUsers className="h-5 w-5" />, text: "A vast network of attorneys" },
 ];
 
 export function Commitment() {
@@ -34,9 +33,17 @@ export function Commitment() {
           <Button href="#contact" variant="outline-dark" className="self-start">
             Reach Out Today
           </Button>
-          <div className="mt-4 grid grid-cols-2 gap-6 sm:grid-cols-4">
-            {stats.map((s) => (
-              <Stat key={s.label} value={s.value} label={s.label} />
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            {highlights.map((h) => (
+              <div
+                key={h.text}
+                className="flex items-center gap-3 rounded-xl border border-line bg-panel px-4 py-3"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent-dark">
+                  {h.icon}
+                </span>
+                <span className="text-sm font-semibold text-navy">{h.text}</span>
+              </div>
             ))}
           </div>
         </div>

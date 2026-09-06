@@ -2,7 +2,7 @@ import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { Button } from "@/components/ui/Button";
 import { PlaceholderPhoto } from "@/components/ui/PlaceholderPhoto";
-import { IconUsers, IconCheck } from "@/components/icons";
+import { IconUsers } from "@/components/icons";
 import { attorneyBio } from "@/lib/content";
 
 export function AboutAttorney() {
@@ -23,15 +23,6 @@ export function AboutAttorney() {
             {attorneyBio.credential}
           </p>
           <p className="text-ink-soft">{attorneyBio.summary}</p>
-
-          <ul className="flex flex-col gap-3">
-            {attorneyBio.highlights.map((item) => (
-              <li key={item} className="flex gap-3 text-sm text-ink-soft">
-                <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
 
           <div className="mt-2 flex flex-col gap-1 border-t border-line pt-5">
             {attorneyBio.education.map((e) => (

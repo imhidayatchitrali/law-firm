@@ -1,11 +1,11 @@
 import { Container } from "@/components/ui/Container";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { Stat } from "@/components/ui/Stat";
+import { IconCheck } from "@/components/icons";
 
-const results = [
-  { value: "$[X],000,000", label: "Premium Verdict" },
-  { value: "$[X],000,000", label: "Motor Vehicle Accident" },
-  { value: "$[X],000,000", label: "Premises Liability" },
+const promises = [
+  "We treat you as an individual, not a number.",
+  "Your case means a lot to you, and it means a lot to us as well.",
+  "That's why we will fight for every dollar that you deserve.",
 ];
 
 export function TrustStats() {
@@ -22,16 +22,14 @@ export function TrustStats() {
             outcomes for every client we represent.
           </p>
         </div>
-        <div className="mt-12 grid gap-7 sm:grid-cols-3">
-          {results.map((r) => (
-            <div
-              key={r.label}
-              className="flex flex-col items-center gap-2 rounded-2xl border border-line bg-panel p-8 text-center"
-            >
-              <Stat value={r.value} label={r.label} size="lg" />
-            </div>
+        <ul className="mx-auto mt-8 flex max-w-2xl flex-col gap-3">
+          {promises.map((item) => (
+            <li key={item} className="flex gap-3 text-ink-soft">
+              <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
+              <span>{item}</span>
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   );

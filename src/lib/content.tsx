@@ -3,9 +3,7 @@ import {
   IconAlertTriangle,
   IconTruck,
   IconMotorcycle,
-  IconStethoscope,
   IconWalking,
-  IconHelmet,
   IconDollar,
   IconHeartPulse,
   IconHome,
@@ -34,19 +32,9 @@ export const practiceAreas: PracticeArea[] = [
     icon: <IconMotorcycle className="h-6 w-6" />,
   },
   {
-    title: "Medical Malpractice",
-    desc: "Harm caused by negligent medical care.",
-    icon: <IconStethoscope className="h-6 w-6" />,
-  },
-  {
     title: "Pedestrian Accidents",
     desc: "Injuries to pedestrians struck by vehicles.",
     icon: <IconWalking className="h-6 w-6" />,
-  },
-  {
-    title: "Construction Accidents",
-    desc: "Injuries on job sites and construction zones.",
-    icon: <IconHelmet className="h-6 w-6" />,
   },
 ];
 
@@ -195,7 +183,6 @@ export type AttorneyBio = {
   name: string;
   credential: string;
   summary: string;
-  highlights: string[];
   education: { degree: string; school: string }[];
 };
 
@@ -203,13 +190,7 @@ export const attorneyBio: AttorneyBio = {
   name: "Patrick A. Abbo",
   credential: "Member, Florida Bar",
   summary:
-    "With 17+ years in plaintiff personal injury practice, Patrick Abbo has built his career on skilled negotiation, thorough research, and persuasive writing — equally at home preparing an appellate brief as negotiating directly with insurance adjusters and risk managers to secure the strongest possible pre-suit settlement.",
-  highlights: [
-    "Handled medical malpractice pre-suit matters, including birth trauma and nursing home negligence cases, from intake through settlement.",
-    "Represented injured clients in auto and motorcycle crash claims, managing every stage from initial case evaluation and medical treatment coordination through demand package preparation and insurance negotiation.",
-    "Led a pre-litigation department, training and supervising a team of paralegals on demand writing and negotiation strategy while personally handling PIP and BI/UM/UIM claims.",
-    "Extensive experience in legal research, trial preparation, and appellate briefing across medical malpractice, premises liability, and auto accident cases.",
-  ],
+    "Patrick Abbo has built his career on skilled negotiation, thorough research, and persuasive writing — the trait that will get you the best settlement possible.",
   education: [
     { degree: "Juris Doctor", school: "Barry University School of Law, Orlando, FL" },
     { degree: "B.A., Liberal Studies", school: "Barry University, Miami, FL" },
