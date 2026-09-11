@@ -11,9 +11,9 @@ export function Footer() {
         <Link href="/" className="font-serif text-xl font-bold text-white">
           {siteConfig.name}
         </Link>
-        <a href={siteConfig.phoneHref} className="text-sm font-bold text-white hover:text-gold">
+        {/* <a href={siteConfig.phoneHref} className="text-sm font-bold text-white hover:text-gold">
           Free Consultation: {siteConfig.phoneDisplay}
-        </a>
+        </a> */}
       </Container>
       <Container className="pt-6 text-xs">
         <p>

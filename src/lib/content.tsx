@@ -17,11 +17,6 @@ export type PracticeArea = { title: string; desc: string; icon: ReactNode };
 
 export const practiceAreas: PracticeArea[] = [
   {
-    title: "Trip & Fall",
-    desc: "Injuries from unsafe or poorly maintained property.",
-    icon: <IconAlertTriangle className="h-6 w-6" />,
-  },
-  {
     title: "Truck Accidents",
     desc: "Collisions involving commercial and freight vehicles.",
     icon: <IconTruck className="h-6 w-6" />,
@@ -30,6 +25,11 @@ export const practiceAreas: PracticeArea[] = [
     title: "Motorcycle Injury",
     desc: "Serious injuries from motorcycle collisions.",
     icon: <IconMotorcycle className="h-6 w-6" />,
+  },
+  {
+    title: "Trip & Fall",
+    desc: "Injuries from unsafe or poorly maintained property.",
+    icon: <IconAlertTriangle className="h-6 w-6" />,
   },
   {
     title: "Pedestrian Accidents",
@@ -97,11 +97,11 @@ export const worthFactors: WorthFactor[] = [
     desc: "Compensation for physical and emotional impact.",
     icon: <IconHeartPulse className="h-6 w-6" />,
   },
-  {
-    title: "Property Damage",
-    desc: "Repair or replacement costs for damaged property.",
-    icon: <IconHome className="h-6 w-6" />,
-  },
+  // {
+  //   title: "Property Damage",
+  //   desc: "Repair or replacement costs for damaged property.",
+  //   icon: <IconHome className="h-6 w-6" />,
+  // },
   {
     title: "Future Impact",
     desc: "Long-term effects on your health, work, and daily life.",
@@ -138,7 +138,7 @@ export const faqs: Faq[] = [
   },
 ];
 
-export type Testimonial = { id:string,quote: string; name: string };
+export type Testimonial = { id: string, quote: string; name: string };
 
 export const testimonials: Testimonial[] = [
   {
@@ -147,7 +147,7 @@ export const testimonials: Testimonial[] = [
       "They handled everything and kept me informed every step of the way. I couldn't have asked for a better team.",
     name: "Client — Motor Vehicle Accident",
   },
-  { 
+  {
     id: "2",
     quote: "From the first call, I felt like a priority, not just another case file.",
     name: "Client — Slip & Fall",

@@ -14,7 +14,7 @@ export function PracticeAreas() {
           </h2>
           <p className="text-ink-soft">
             In {siteConfig.state}, personal injury claims cover a wide range of accidents caused
-            by negligence. Here are the cases we handle most.
+            by negligence. Here are the cases we handle.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">

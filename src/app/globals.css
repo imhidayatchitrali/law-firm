@@ -30,13 +30,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  background: var(--color-cream);
-  color: var(--color-ink);
-}
+@layer base {
+  body {
+    background: var(--color-cream);
+    color: var(--color-ink);
+  }
 
-a {
-  color: inherit;
+  a {
+    color: inherit;
+  }
 }
 
 :focus-visible {

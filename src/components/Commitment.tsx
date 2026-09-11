@@ -5,7 +5,7 @@ import { PlaceholderPhoto } from "@/components/ui/PlaceholderPhoto";
 import { IconBuilding, IconClock, IconUsers, IconStar } from "@/components/icons";
 
 const highlights = [
-  { icon: <IconStar className="h-5 w-5" />, text: "5-star reviews from our clients" },
+  { icon: <IconStar className="h-5 w-5" />, text: "5-star come from skinner" },
   { icon: <IconBuilding className="h-5 w-5" />, text: "Conveniently located in Orlando" },
   { icon: <IconClock className="h-5 w-5" />, text: "Experience that counts and gets results" },
   { icon: <IconUsers className="h-5 w-5" />, text: "A vast network of attorneys" },

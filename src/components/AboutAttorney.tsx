@@ -32,7 +32,11 @@ export function AboutAttorney() {
             ))}
           </div>
 
-          <Button href="#contact" variant="outline-dark" className="mt-2 self-start">
+          <Button
+            href="#contact"
+            variant="outline-dark"
+            className="mt-2 self-start bg-navy text-white! hover:bg-navy-dark"
+          >
             Schedule a Free Consultation
           </Button>
         </div>

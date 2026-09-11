@@ -13,9 +13,9 @@ export function WhyUs() {
           {siteConfig.state}
         </h2>
         <p className="text-white/80">
-          Our proven track record of results is why our clients trust us. Every attorney at our
-          firm has one focus: getting you the maximum compensation you deserve, as quickly and
-          directly as possible.
+          Our firm is a network of top notch lawyers all throughout Florida.
+           You dont get just one attorney, but a whole network, dedicated to your case.
+
         </p>
         <Button href="#contact" variant="accent" className="mt-1">
           Get a Free Case Evaluation

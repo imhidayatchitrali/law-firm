@@ -37,9 +37,9 @@ export function Hero() {
               compensation. At {siteConfig.name}, we examine every detail of your case in pursuit
               of justice &mdash; and we don&apos;t get paid unless you do.
             </p>
-            <p className="font-bold text-navy">
+            {/* <p className="font-bold text-navy">
               We&apos;ve recovered more than millions for our clients.
-            </p>
+            </p> */}
           </div>
 
           <div className="flex flex-wrap gap-4 pt-1">
