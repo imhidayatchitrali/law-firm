@@ -20,7 +20,7 @@ export function PracticeAreas() {
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           {practiceAreas.map((area) => (
             <div
-              key={area.title}
+              key={area.id}
               className="flex gap-4 rounded-2xl border border-line bg-panel p-8"
             >
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-accent-soft text-accent-dark">

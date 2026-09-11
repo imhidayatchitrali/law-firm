@@ -13,25 +13,29 @@ import {
   IconCamera,
 } from "@/components/icons";
 
-export type PracticeArea = { title: string; desc: string; icon: ReactNode };
+export type PracticeArea = {id: number; title: string; desc: string; icon: ReactNode };
 
 export const practiceAreas: PracticeArea[] = [
   {
+    id: 1,
     title: "Truck Accidents",
     desc: "Collisions involving commercial and freight vehicles.",
     icon: <IconTruck className="h-6 w-6" />,
   },
   {
+    id: 2,
     title: "Motorcycle Injury",
     desc: "Serious injuries from motorcycle collisions.",
     icon: <IconMotorcycle className="h-6 w-6" />,
   },
   {
+    id: 3,
     title: "Trip & Fall",
     desc: "Injuries from unsafe or poorly maintained property.",
     icon: <IconAlertTriangle className="h-6 w-6" />,
   },
   {
+    id: 4,
     title: "Pedestrian Accidents",
     desc: "Injuries to pedestrians struck by vehicles.",
     icon: <IconWalking className="h-6 w-6" />,
