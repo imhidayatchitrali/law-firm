@@ -8,8 +8,8 @@ export const siteConfig = {
     "Abbo Law represents people injured through someone else's negligence — auto and motorcycle accidents, medical malpractice, premises liability, and wrongful death claims. Free consultation. No fees unless we win.",
   // TODO: replace with the real production domain before launch.
   url: "https://www.example.com",
-  phoneDisplay: "(248) 770-2289",
-  phoneHref: "tel:+12487702289",
+  phoneDisplay: "947-224-0496",
+  phoneHref: "tel:+19472240496",
   email: "patrickabbo@gmail.com",
   state: "Florida",
   address: {
