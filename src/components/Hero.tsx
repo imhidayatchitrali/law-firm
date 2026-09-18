@@ -24,7 +24,7 @@ export function Hero() {
             <h1 className="font-serif text-4xl leading-tight font-bold text-navy md:text-5xl">
               {siteConfig.state} Personal Injury Attorneys
             </h1>
-            <p className="font-serif text-2xl leading-snug font-bold text-gold md:text-3xl">
+            <p className="font-serif text-2xl leading-snug font-bold md:text-3xl">
                Millions Recovered.
               <br />
               No Fees Until We Win.
@@ -44,10 +44,10 @@ export function Hero() {
 
           <div className="flex flex-wrap gap-4 pt-1">
             <Button href="#contact" variant="accent">
-              <IconArrowCircle className="h-4 w-4" />
+              <IconArrowCircle className="h-4 w-4 text" />
               Get a Free Evaluation
             </Button>
-            <Button href={siteConfig.phoneHref} variant="outline">
+            <Button href={siteConfig.phoneHref} variant="outline-dark">
               <IconPhone className="h-4 w-4" />
               Call {siteConfig.phoneDisplay}
             </Button>

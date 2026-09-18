@@ -10,8 +10,8 @@ export function Testimonials() {
         <div className="mx-auto flex max-w-xl flex-col items-center gap-3 text-center">
           <Eyebrow>Testimonials</Eyebrow>
           <h2 className="font-serif text-3xl font-bold text-navy md:text-4xl">
-            {/* Real Client Stories */}
-            These need to come from Skinner.
+            Real Client Stories
+            {/* These need to come from Skinner. */}
           </h2>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-3">

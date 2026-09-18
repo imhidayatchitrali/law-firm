@@ -16,30 +16,37 @@ import {
 export type PracticeArea = {id: number; title: string; desc: string; icon: ReactNode };
 
 export const practiceAreas: PracticeArea[] = [
-  {
+   {
     id: 1,
+    title: "Auto Accidents",
+    desc: "Collisions involving passenger vehicles and automobiles.",
+    icon: <IconHome className="h-6 w-6" />,
+  },
+  {
+    id: 2,
     title: "Truck Accidents",
     desc: "Collisions involving commercial and freight vehicles.",
     icon: <IconTruck className="h-6 w-6" />,
   },
   {
-    id: 2,
+    id: 3,
     title: "Motorcycle Injury",
     desc: "Serious injuries from motorcycle collisions.",
     icon: <IconMotorcycle className="h-6 w-6" />,
   },
   {
-    id: 3,
+    id: 4,
     title: "Trip & Fall",
     desc: "Injuries from unsafe or poorly maintained property.",
     icon: <IconAlertTriangle className="h-6 w-6" />,
   },
   {
-    id: 4,
+    id: 5,
     title: "Pedestrian Accidents",
     desc: "Injuries to pedestrians struck by vehicles.",
     icon: <IconWalking className="h-6 w-6" />,
   },
+ 
 ];
 
 export type Step = { num: string; title: string; desc: string; icon: ReactNode };

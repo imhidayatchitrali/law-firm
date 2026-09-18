@@ -14,7 +14,7 @@ export function WhyUs() {
         </h2>
         <p className="text-white/80">
           Our firm is a network of top notch lawyers all throughout Florida.
-           You dont get just one attorney, but a whole network, dedicated to your case.
+           You dont get just one attorney, but a whole team, dedicated to your case.
 
         </p>
         <Button href="#contact" variant="accent" className="mt-1">
