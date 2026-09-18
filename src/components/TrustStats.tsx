@@ -14,17 +14,17 @@ export function TrustStats() {
       <Container>
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-3 text-center">
           <Eyebrow>Why Clients Choose Us</Eyebrow>
-          <h2 className="font-serif text-3xl font-bold text-navy md:text-4xl">
+          <h2 className="font-serif text-5xl font-bold text-navy md:text-6xl">
             Real People. Real Trust. Real Outcomes.
           </h2>
-          <p className="text-ink-soft">
+          <p className="text-ink-soft text-lg">
             Our results speak for themselves — honest, transparent, and committed to real
             outcomes for every client we represent.
           </p>
         </div>
         <ul className="mx-auto mt-8 flex max-w-2xl flex-col gap-3">
           {promises.map((item) => (
-            <li key={item} className="flex gap-3 text-ink-soft">
+            <li key={item} className="flex gap-3 text-ink-soft text-lg">
               <IconCheck className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
               <span>{item}</span>
             </li>

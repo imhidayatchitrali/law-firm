@@ -9,7 +9,7 @@ export function Eyebrow({
 }) {
   return (
     <span
-      className={`text-xs font-bold tracking-[0.14em] uppercase ${
+      className={`text-sm font-bold tracking-[0.14em] uppercase ${
         onDark ? "text-gold" : "text-accent"
       }`}
     >
