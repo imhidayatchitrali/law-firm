@@ -12,9 +12,9 @@ export function PracticeAreas() {
           <h2 className="font-serif text-3xl font-bold text-navy md:text-4xl">
             What Is a Personal Injury Case?
           </h2>
-          <p className="text-ink-soft">
-            In {siteConfig.state}, personal injury claims cover a wide range of accidents caused
-            by negligence. Here are the cases we handle.
+          <p className="text-ink-soft text-lg md:text-xl">
+            In  Florida and Michigan, personal injury claims cover a wide range of accidents caused
+            by negligence. Here are the cases our Attorneys handle.
           </p>
         </div>
         <div className="mt-12 grid gap-6 sm:grid-cols-2">

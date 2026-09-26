@@ -19,31 +19,31 @@ export const practiceAreas: PracticeArea[] = [
    {
     id: 1,
     title: "Auto Accidents",
-    desc: "Collisions involving passenger vehicles and automobiles.",
+    desc: "Serious Injuries from Collisions involving cars and motor vehicles.",
     icon: <IconHome className="h-6 w-6" />,
   },
   {
     id: 2,
     title: "Truck Accidents",
-    desc: "Collisions involving commercial and freight vehicles.",
+    desc: "Serious Injuries due to Collisions involving commercial and freight vehicles.",
     icon: <IconTruck className="h-6 w-6" />,
   },
   {
     id: 3,
     title: "Motorcycle Injury",
-    desc: "Serious injuries from motorcycle collisions.",
+    desc: "Serious Injuries involving motorcycle Collisions.",
     icon: <IconMotorcycle className="h-6 w-6" />,
   },
   {
     id: 4,
     title: "Trip & Fall",
-    desc: "Injuries from unsafe or poorly maintained property.",
+    desc: "Serious Injuries due to unsafe or poorly maintained property.",
     icon: <IconAlertTriangle className="h-6 w-6" />,
   },
   {
     id: 5,
     title: "Pedestrian Accidents",
-    desc: "Injuries to pedestrians struck by vehicles.",
+    desc: "Serious Injuries to pedestrians Struck by vehicles.",
     icon: <IconWalking className="h-6 w-6" />,
   },
  
