@@ -14,7 +14,7 @@ const highlights = [
 export function Commitment() {
   
   return (
-    <section className="py-20 md:py-24">
+    <section id="commitment" className="py-20 md:py-24">
       <Container className="grid items-center gap-14 md:grid-cols-2">
         <PlaceholderPhoto
           label="Office / Consultation Photo"

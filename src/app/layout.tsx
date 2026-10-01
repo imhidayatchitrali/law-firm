@@ -111,10 +111,10 @@ function LegalServiceJsonLd() {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${lora.variable} ${workSans.variable}`}>
-      <body className="flex min-h-screen flex-col bg-cream font-sans text-ink antialiased">
+      <body className="abbo-redesign-preview abbo-scroll-demo flex min-h-screen flex-col bg-cream font-sans text-ink antialiased">
         <LegalServiceJsonLd />
         <Header />
-        <main className="flex-1 pt-22 md:pt-28">{children}</main>
+        <main className="flex-1">{children}</main>
         <Footer />
       </body>
     </html>

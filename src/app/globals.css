@@ -3,6 +3,10 @@
 :root {
   --background: oklch(0.975 0.012 80);
   --foreground: oklch(0.24 0.03 260);
+  --abbo-ink: #142b3e;
+  --abbo-accent: #a12b27;
+  --abbo-cream: #f8f5ef;
+  --abbo-border: #ddd7cf;
 }
 
 @theme inline {
@@ -32,8 +36,9 @@ html {
 
 @layer base {
   body {
-    background: var(--color-cream);
-    color: var(--color-ink);
+    background: #fff;
+    color: var(--abbo-ink);
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   a {
@@ -41,7 +46,745 @@ html {
   }
 }
 
+@layer components {
+  .abbo-header-preview {
+    position: sticky !important;
+    top: 0;
+    z-index: 80;
+    background: rgba(255, 255, 255, 0.97);
+    border-bottom: 1px solid rgba(20, 43, 62, 0.12);
+    box-shadow: 0 5px 25px rgba(20, 43, 62, 0.08);
+    backdrop-filter: blur(12px);
+  }
+
+  .abbo-header-preview-inner {
+    width: 100%;
+    max-width: 1220px;
+    min-height: 0;
+    padding: 7px 24px;
+    gap: 22px;
+    justify-content: space-between;
+    text-align: left !important;
+  }
+
+  .abbo-header-preview-logo {
+    flex: 0 0 auto;
+  }
+
+  .abbo-header-preview-logo img {
+    display: block;
+    width: 136px !important;
+    height: auto !important;
+  }
+
+  .abbo-header-nav {
+    flex: 1 1 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: clamp(12px, 1.6vw, 24px);
+    align-items: center;
+  }
+
+  .abbo-header-nav a,
+  .abbo-header-nav a:not(.abbo-guide-link) {
+    display: inline-block;
+    color: #21384b;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .abbo-header-nav a:hover,
+  .abbo-header-nav a:focus-visible {
+    color: var(--abbo-accent);
+  }
+
+  .abbo-guide-button {
+    display: block !important;
+    grid-column: 1 / -1;
+    justify-self: center;
+    padding: 8px 20px;
+    border-radius: 999px;
+    background: #9e2928;
+    color: #fff !important;
+    font: 800 16px / 1.2 Arial, sans-serif;
+    letter-spacing: 0.015em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 3px 9px rgba(63, 31, 31, 0.16);
+  }
+
+  .abbo-guide-button:hover,
+  .abbo-guide-button:focus-visible {
+    background: #79201e;
+    color: #fff !important;
+    text-decoration: underline;
+  }
+
+  .abbo-header-menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .abbo-email-button:not(.abbo-header-contact) {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 14px;
+    width: 210px !important;
+    min-height: 58px !important;
+    border-radius: 999px;
+    background: linear-gradient(180deg, #dc483b 0%, #c32d2b 100%);
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 10px 20px rgba(195, 45, 43, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .abbo-email-button:hover,
+  .abbo-email-button:focus-visible {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 26px rgba(195, 45, 43, 0.22);
+  }
+
+  .abbo-email-heading {
+    display: block;
+    color: #fff;
+    font: 700 12px/1.2 Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .abbo-email-address {
+    display: block;
+    color: #fff;
+    font: 600 12px/1.2 Arial, sans-serif;
+    white-space: nowrap;
+  }
+
+  .abbo-main-shell {
+    position: relative;
+    z-index: 1;
+    background: transparent !important;
+  }
+
+  .abbo-main-shell > section {
+    position: relative;
+    isolation: isolate;
+    scroll-margin-top: 120px;
+    background: transparent !important;
+  }
+
+  .abbo-scroll-stage {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .abbo-scroll-scene {
+    position: absolute;
+    inset: -4%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transform: scale(1.08) translate3d(0, 0, 0);
+    filter: brightness(0.88) contrast(1.1);
+    will-change: opacity, transform;
+  }
+
+  .abbo-scroll-scene:first-child {
+    opacity: 1;
+  }
+
+  .abbo-hero {
+    position: relative;
+    isolation: isolate;
+    background: #f6f1eb;
+    min-height: 540px;
+  }
+
+  .abbo-hero > img {
+    object-fit: cover;
+    object-position: center 55%;
+  }
+
+  .abbo-hero-content {
+    width: min(100%, 1220px);
+    padding: 0 0 12px;
+    text-align: left;
+  }
+
+  .abbo-hero-content h1 {
+    max-width: 900px;
+    margin: 0;
+    color: #10293d;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: -0.035em;
+    white-space: nowrap;
+  }
+
+  .abbo-hero-description {
+    max-width: 760px;
+    margin-top: 24px;
+    padding: 0;
+    text-align: left;
+    background: none;
+    box-shadow: none;
+  }
+
+  .abbo-hero-description p.abbo-hero-lead {
+    max-width: 760px;
+    margin: 0 0 22px;
+    padding: 0;
+    border: 0;
+    color: #10293d;
+    font: 700 clamp(22px, 2.2vw, 28px) / 1.3 Arial, Helvetica, sans-serif;
+    letter-spacing: -0.018em;
+    text-align: left !important;
+    white-space: normal;
+  }
+
+  .abbo-hero-points {
+    max-width: 710px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .abbo-hero-points li {
+    position: relative;
+    margin: 0 0 11px;
+    padding-left: 1.55em;
+    color: #233c50;
+    font: 500 clamp(18px, 1.7vw, 21px) / 1.44 Arial, Helvetica, sans-serif;
+  }
+
+  .abbo-hero-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: -0.02em;
+    color: var(--abbo-accent);
+    font-size: 1.12em;
+    font-weight: 800;
+  }
+
+  .abbo-hero-support {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    max-width: 760px;
+    margin-top: 28px;
+  }
+
+  .abbo-hero-callout {
+    min-height: 0;
+    margin: 0;
+    padding: 12px 0 0;
+    border-top: 2px solid rgba(161, 43, 39, 0.65);
+    color: #20384a;
+    font: 700 18px/1.4 Arial, Helvetica, sans-serif;
+  }
+
+  .abbo-hero-action {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 22px;
+  }
+
+  .abbo-footer {
+    padding: 28px 0 34px !important;
+    color: #dce4ec;
+  }
+
+  .abbo-footer-brand {
+    display: inline-block;
+    color: #fff;
+    font: 700 20px Georgia, serif;
+    text-decoration: none;
+  }
+
+  .abbo-footer-copyright {
+    margin: 12px 0 16px;
+    color: #dce4ec;
+    font: 12px/1.5 Arial, sans-serif;
+  }
+
+  .abbo-footer-legal {
+    max-width: 1000px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 14px;
+    color: #dce4ec;
+    font: 12px/1.55 Arial, sans-serif;
+  }
+
+  .abbo-footer-legal p {
+    margin: 0 0 10px;
+  }
+
+  .abbo-footer-legal p:last-child {
+    margin-bottom: 0;
+  }
+
+  .abbo-footer-legal strong {
+    color: #fff;
+    font-weight: 700;
+  }
+
+  .abbo-footer-legal a {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .abbo-footer-legal a:hover,
+  .abbo-footer-legal a:focus-visible {
+    color: #ffe1a2;
+  }
+
+  .abbo-disclaimer-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    overflow-y: auto;
+    padding: 28px 16px;
+    background: rgba(9, 20, 38, 0.82);
+  }
+
+  .abbo-disclaimer-overlay:target {
+    display: block;
+  }
+
+  body:has(.abbo-disclaimer-overlay:target) {
+    overflow: hidden;
+  }
+
+  .abbo-disclaimer-paper {
+    box-sizing: border-box;
+    position: relative;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 38px clamp(20px, 5vw, 54px) 48px;
+    border-radius: 16px;
+    background: #fff;
+    color: #142b3e;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.25);
+    font: 16px/1.6 Arial, sans-serif;
+  }
+
+  .abbo-disclaimer-paper h1 {
+    margin: 0 100px 20px 0;
+    color: #142b3e;
+    font: 700 clamp(26px, 4vw, 34px) / 1.2 Georgia, serif;
+  }
+
+  .abbo-disclaimer-paper h2 {
+    margin: 24px 0 8px;
+    color: #142b3e;
+    font: 700 20px / 1.3 Georgia, serif;
+  }
+
+  .abbo-disclaimer-paper p {
+    margin: 0 0 14px;
+  }
+
+  .abbo-disclaimer-paper a:not(.abbo-disclaimer-close) {
+    color: #a12b27;
+    text-decoration: underline;
+  }
+
+  .abbo-disclaimer-close {
+    float: right;
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #a12b27;
+    color: #fff;
+    font: 700 14px/1.3 Arial, sans-serif;
+    text-decoration: none;
+  }
+
+  .abbo-disclaimer-close:hover,
+  .abbo-disclaimer-close:focus-visible {
+    background: #770209;
+    color: #fff;
+  }
+
+  @media (min-width: 901px) {
+    .abbo-header-preview-inner {
+      display: grid;
+      grid-template-columns: 210px minmax(0, 1fr) 210px;
+      align-items: center;
+      column-gap: 20px;
+    }
+
+    .abbo-header-preview-logo {
+      justify-self: center;
+    }
+
+    .abbo-header-nav {
+      width: 100%;
+      justify-self: stretch;
+      flex: none;
+    }
+
+    .abbo-header-contact {
+      justify-self: end;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .abbo-header-preview-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      grid-template-areas: "logo contact" "nav nav";
+      gap: 6px 12px;
+      padding: 8px 16px 10px;
+    }
+
+    .abbo-header-preview-logo {
+      grid-area: logo;
+    }
+
+    .abbo-header-preview-logo img {
+      width: 76px !important;
+    }
+
+    .abbo-header-nav {
+      grid-area: nav;
+      justify-content: flex-start;
+      gap: 18px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+
+    .abbo-header-nav a,
+    .abbo-header-nav a:not(.abbo-guide-link) {
+      display: inline-block;
+      flex: 0 0 auto;
+      font-size: 13px;
+    }
+
+    .abbo-header-contact {
+      grid-area: contact;
+      flex: none;
+    }
+
+    .abbo-hero-content {
+      padding-top: 0;
+    }
+
+    .abbo-hero-content h1 {
+      white-space: normal;
+      max-width: 760px;
+    }
+
+    .abbo-hero-support {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-top: 22px;
+    }
+  }
+
+  @media (max-width: 680px) {
+    .abbo-hero {
+      min-height: 420px;
+    }
+
+    .abbo-hero-content {
+      padding: 0 0 10px;
+    }
+
+    .abbo-hero-content h1 {
+      font-size: clamp(30px, 8vw, 38px);
+      white-space: normal;
+    }
+
+    .abbo-hero-description p.abbo-hero-lead {
+      font-size: 22px;
+    }
+
+    .abbo-hero-points li {
+      font-size: 18px;
+    }
+
+    .abbo-header-preview-logo img {
+      width: 76px !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .abbo-scroll-scene {
+      will-change: auto;
+      transform: none !important;
+    }
+  }
+}
+
+body.abbo-redesign-preview {
+  background: #fff;
+  color: var(--abbo-ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body.abbo-redesign-preview * {
+  box-sizing: border-box;
+}
+
+body.abbo-redesign-preview main {
+  padding-top: 0 !important;
+}
+
+body.abbo-redesign-preview main > section {
+  scroll-margin-top: 120px;
+}
+
+body.abbo-scroll-demo {
+  background: #eef0ef;
+}
+
+body.abbo-scroll-demo .abbo-scroll-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body.abbo-scroll-demo .abbo-scroll-scene {
+  position: absolute;
+  inset: -4%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transform: scale(1.08) translate3d(0, 0, 0);
+  filter: brightness(0.88) contrast(1.1);
+  will-change: opacity, transform;
+}
+
+body.abbo-scroll-demo .abbo-scroll-scene:first-child {
+  opacity: 1;
+}
+
+body.abbo-scroll-demo main {
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+
+body.abbo-scroll-demo main > section {
+  position: relative;
+  isolation: isolate;
+  background: transparent !important;
+}
+
+body.abbo-scroll-demo main > section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(90deg, rgba(250, 248, 244, 0.94) 0%, rgba(250, 248, 244, 0.83) 55%, rgba(250, 248, 244, 0.43) 100%);
+  pointer-events: none;
+}
+
+body.abbo-scroll-demo main > section > div {
+  position: relative;
+  z-index: 1;
+}
+
+body.abbo-scroll-demo .abbo-hero > img,
+body.abbo-scroll-demo .abbo-hero > .absolute.inset-0,
+body.abbo-scroll-demo .abbo-accident-bg,
+body.abbo-scroll-demo .abbo-accident-overlay,
+body.abbo-scroll-demo .abbo-commitment-bg,
+body.abbo-scroll-demo .abbo-commitment-overlay {
+  display: none !important;
+}
+
+body.abbo-scroll-demo main > section#commitment::before,
+body.abbo-scroll-demo main > section#about::before {
+  background: rgba(250, 248, 244, 0.8) !important;
+}
+
+body.abbo-scroll-demo main > section#contact::before {
+  background: linear-gradient(90deg, rgba(8, 26, 40, 0.98), rgba(8, 26, 40, 0.84)) !important;
+}
+
+body.abbo-scroll-demo footer {
+  position: relative;
+  z-index: 1;
+  background: #0b1c2c !important;
+  color: #e3ebf2;
+}
+
 :focus-visible {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* Header contact button, matching src/app.html: flat accent pill that darkens on hover. */
+a.abbo-email-button.abbo-header-contact {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 210px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  width: 210px !important;
+  min-height: 58px !important;
+  padding: 8px 14px !important;
+  border: 2px solid #a12b27;
+  border-radius: 999px;
+  background: #a12b27;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  font: 700 15px/1.25 Arial, sans-serif;
+  box-shadow: none;
+  transform: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+a.abbo-email-button.abbo-header-contact .abbo-email-heading {
+  display: block;
+  color: #fff;
+  font: 700 12px/1.2 Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+a.abbo-email-button.abbo-header-contact .abbo-email-address {
+  display: block;
+  color: #fff;
+  font: 600 12px/1.2 Arial, sans-serif;
+  white-space: nowrap;
+}
+
+a.abbo-email-button.abbo-header-contact:hover,
+a.abbo-email-button.abbo-header-contact:focus-visible {
+  background: #770209;
+  border-color: #770209;
+  color: #fff;
+  box-shadow: none;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  a.abbo-email-button.abbo-header-contact {
+    flex: none;
+    width: max-content !important;
+    max-width: 100%;
+    padding: 8px 12px !important;
+  }
+}
+
+/* Header nav breakpoints, matching src/app.html. */
+@media (max-width: 1050px) {
+  .abbo-header-nav {
+    gap: 10px;
+  }
+
+  .abbo-header-nav a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 900px) {
+  .abbo-header-preview-inner {
+    display: grid;
+    grid-template-columns: 76px minmax(0, 1fr);
+    grid-template-areas: "logo contact" "nav nav";
+    gap: 6px 10px;
+    padding: 8px 16px 10px;
+  }
+
+  .abbo-header-preview-logo {
+    grid-area: logo;
+    justify-self: start;
+  }
+
+  .abbo-header-nav-wrap {
+    grid-area: nav;
+    width: 100%;
+  }
+
+  .abbo-header-menu-group {
+    width: 100%;
+  }
+
+  .abbo-header-nav {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    column-gap: clamp(10px, 2.5vw, 22px);
+    row-gap: 8px;
+    justify-content: center;
+    width: 100%;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .abbo-header-nav a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    font-size: 13px;
+  }
+
+  .abbo-guide-button {
+    padding: 7px 14px;
+    font-size: 14px;
+  }
+
+  a.abbo-email-button.abbo-header-contact {
+    grid-area: contact;
+    justify-self: end;
+  }
+}
+
+@media (max-width: 390px) {
+  .abbo-header-nav {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+  }
+
+  .abbo-header-nav a {
+    justify-content: center;
+    font-size: 11px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .abbo-guide-button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 340px) {
+  .abbo-header-preview-inner {
+    column-gap: 8px;
+    padding-inline: 12px;
+  }
+
+  a.abbo-email-button.abbo-header-contact {
+    min-height: 54px !important;
+    padding-inline: 8px !important;
+  }
+
+  a.abbo-email-button.abbo-header-contact .abbo-email-address {
+    font-size: 11px;
+  }
 }

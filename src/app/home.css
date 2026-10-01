@@ -1,0 +1,225 @@
+/* Homepage section styles, ported from the src/app.html design. */
+
+/* Hero */
+body.abbo-redesign-preview .abbo-hero { color: #142b3e; isolation: isolate; background: #f6f1eb; }
+body.abbo-redesign-preview .abbo-hero .abbo-hero-content { position: relative; z-index: 1; width: min(100%, 1220px); margin: 0 auto; padding: 32px 32px 12px !important; text-align: left; }
+body.abbo-redesign-preview .abbo-hero-content h1 { max-width: none; margin: 0; color: #10293d; font: 700 clamp(29px, 3.3vw, 44px)/1.12 Georgia, "Times New Roman", serif; letter-spacing: -.035em; white-space: nowrap; }
+body.abbo-redesign-preview .abbo-hero-content .abbo-hero-description { max-width: 760px; margin: 24px 0 0; padding: 0; text-align: left; background: none; box-shadow: none; }
+body.abbo-redesign-preview .abbo-hero-content .abbo-hero-description p.abbo-hero-lead { max-width: 760px; margin: 0 0 22px; border: 0; padding: 0; text-align: left !important; white-space: normal; color: #10293d; font: 700 clamp(22px, 2.2vw, 28px)/1.3 Arial, Helvetica, sans-serif; letter-spacing: -.018em; }
+body.abbo-redesign-preview .abbo-hero-content .abbo-hero-points { max-width: 710px; margin: 0; padding: 0; list-style: none; text-align: left; }
+body.abbo-redesign-preview .abbo-hero-content .abbo-hero-points li { position: relative; margin: 0 0 12px; padding-left: 1.55em; color: #233c50; font: 500 clamp(18px, 1.7vw, 21px)/1.44 Arial, Helvetica, sans-serif; }
+body.abbo-redesign-preview .abbo-hero-content .abbo-hero-points li:last-child { margin-bottom: 0; }
+body.abbo-redesign-preview .abbo-hero-support { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; max-width: 760px; margin: 28px 0 0; }
+body.abbo-redesign-preview .abbo-hero-content .abbo-hero-callout { min-height: 0; margin: 0; padding: 12px 0 0; border-top: 2px solid rgba(161, 43, 39, .65); color: #20384a; font: 700 18px/1.4 Arial, Helvetica, sans-serif; }
+body.abbo-redesign-preview .abbo-hero-content .abbo-hero-action { display: flex; align-items: center; flex-wrap: wrap; gap: 18px; margin-top: 22px; }
+body.abbo-redesign-preview .abbo-hero-next { min-width: 0; }
+body.abbo-redesign-preview .abbo-hero-next .abbo-hero-action { margin-top: 16px; }
+
+/* Email buttons inside the page body (the header button keeps its own styles). */
+main a.abbo-email-button,
+main a.abbo-email-button.abbo-email-outline {
+  box-sizing: border-box; display: inline-flex; flex-direction: column; align-items: center; justify-content: center;
+  width: min(100%, 260px) !important; max-width: 100%; min-height: 72px !important; height: auto !important;
+  padding: 12px 20px !important; gap: 3px !important; border: 2px solid #a12b27 !important;
+  border-radius: 999px !important; background: #a12b27 !important; color: #fff !important;
+  text-align: center !important; text-decoration: none !important; text-transform: none !important;
+  font: 700 15px/1.25 Arial, sans-serif !important; white-space: normal !important;
+  box-shadow: 0 4px 12px rgba(80, 15, 15, .16);
+}
+main a.abbo-email-button .abbo-email-heading { display: block; color: #fff; font: 700 15px/1.2 Arial, sans-serif; text-transform: uppercase; letter-spacing: .02em; }
+main a.abbo-email-button .abbo-email-address { display: block; color: #fff; font: 600 14px/1.2 Arial, sans-serif; text-transform: none; overflow-wrap: anywhere; white-space: normal; }
+main a.abbo-email-button:hover,
+main a.abbo-email-button:focus-visible {
+  background: #770209 !important; border-color: #770209 !important; color: #fff !important;
+}
+body.abbo-redesign-preview .abbo-hero-next .abbo-hero-action a.abbo-email-button { width: min(100%, 250px) !important; min-height: 52px !important; padding: 10px 18px !important; }
+body.abbo-redesign-preview .abbo-hero-next a.abbo-email-button .abbo-email-address { font-size: 16px; white-space: nowrap; }
+
+/* Shared section rhythm and headings */
+body.abbo-redesign-preview main > section:not(.abbo-hero) { padding-top: 12px !important; padding-bottom: 12px !important; }
+body.abbo-redesign-preview main > section { scroll-margin-top: 120px; }
+body.abbo-redesign-preview main > section > div { min-width: 0; }
+body.abbo-redesign-preview main > section:not(.abbo-hero):not(#contact) h2 { font-family: Georgia, "Times New Roman", serif; font-size: clamp(34px, 3.3vw, 46px) !important; line-height: 1.16; letter-spacing: -.03em; color: #142b3e; }
+body.abbo-redesign-preview main > section:not(.abbo-hero) span.text-accent.uppercase { font-size: 13px !important; letter-spacing: .16em; }
+
+/* Practice areas */
+.abbo-accident { position: relative; isolation: isolate; overflow: hidden; }
+.abbo-accident-content { position: relative; z-index: 1; }
+.abbo-accident-content h2, .abbo-accident-content h3, .abbo-accident-content p { color: #142b3e; }
+body.abbo-redesign-preview .abbo-accident-content { max-width: 1200px; }
+body.abbo-redesign-preview .abbo-accident-content > .abbo-practice-intro { max-width: none; gap: 10px; }
+body.abbo-redesign-preview .abbo-accident-content > .flex p { font-size: 18px !important; line-height: 1.5; color: #3f5363; }
+body.abbo-redesign-preview .abbo-accident-content > .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin-top: 32px; }
+body.abbo-redesign-preview .abbo-accident-content > .grid > div { display: flex; flex-direction: column; gap: 12px; min-height: 215px; padding: 25px; border: 1px solid #e0d9d1; border-radius: 16px; background: #fff !important; box-shadow: 0 8px 28px rgba(20, 43, 62, .06); transition: transform .2s ease, box-shadow .2s ease; }
+body.abbo-redesign-preview .abbo-accident-content > .grid > div:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(20, 43, 62, .12); }
+body.abbo-redesign-preview .abbo-accident-content > .grid > div > div:first-child { width: 52px; height: 52px; background: #f6e8e5; color: #a12b27; }
+body.abbo-redesign-preview .abbo-accident-content > .grid > div > div:first-child svg { display: block; width: 34px; height: 34px; flex: none; }
+body.abbo-redesign-preview .abbo-accident-content > .grid h3 { font: 700 21px/1.2 Georgia, "Times New Roman", serif; color: #142b3e; }
+body.abbo-redesign-preview .abbo-accident-content > .grid p { font-size: 16px !important; line-height: 1.5; color: #45596a; }
+@media (min-width: 980px) {
+  body.abbo-redesign-preview .abbo-accident-content .abbo-practice-one-line { white-space: nowrap; }
+}
+
+/* Commitment */
+.abbo-commitment { position: relative; isolation: isolate; overflow: hidden; }
+.abbo-commitment-content { position: relative; z-index: 1; }
+.abbo-commitment-content h2, .abbo-commitment-content p { color: #142b3e; }
+body.abbo-redesign-preview .abbo-commitment-content { max-width: 1200px; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: 56px; }
+body.abbo-redesign-preview .abbo-commitment-content > .order-1 { gap: 17px; }
+body.abbo-redesign-preview .abbo-commitment-content > .order-1 > div { gap: 12px; }
+body.abbo-redesign-preview .abbo-commitment-content > .order-1 > div p { font-size: 19px; line-height: 1.55; color: #31485a; }
+.abbo-consultation-figure { margin: 0; min-width: 0; }
+body.abbo-redesign-preview .abbo-consultation-frame { height: 440px; border-radius: 18px; box-shadow: 0 15px 45px rgba(20, 43, 62, .18); }
+.abbo-consultation-photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center center; }
+body.abbo-redesign-preview .abbo-consultation-disclosure { margin: 3px 0 0; padding: 0; border: 0; border-radius: 0; background: transparent; color: #405466; font: 500 10px/1.25 Arial, sans-serif; }
+
+/* Injury guide */
+body.abbo-redesign-preview main > section#injury-guide { padding-top: 4px !important; }
+body.abbo-redesign-preview #injury-guide .max-w-3xl { max-width: 820px; gap: 7px; }
+body.abbo-redesign-preview #injury-guide .max-w-3xl > span.text-accent { font-size: 14px !important; letter-spacing: .17em; }
+body.abbo-redesign-preview #injury-guide h2 { font-size: clamp(42px, 4.4vw, 56px) !important; line-height: 1.08; }
+body.abbo-redesign-preview #injury-guide .max-w-3xl > p { font-size: 18px !important; line-height: 1.5; color: #43596a; }
+body.abbo-redesign-preview #injury-guide .abbo-guide-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); margin-top: 32px; gap: 15px; }
+body.abbo-redesign-preview #injury-guide .abbo-guide-steps > li { display: grid; grid-template-columns: 34px minmax(0, 1fr); column-gap: 12px; row-gap: 3px; align-content: start; min-height: 152px; padding: 21px; border: 1px solid #dee5e6; border-radius: 15px; background: #fff !important; box-shadow: 0 5px 20px rgba(20, 43, 62, .04); }
+body.abbo-redesign-preview #injury-guide .abbo-guide-steps > li > div { grid-row: 1 / span 2; width: 34px; height: 34px; font-size: 13px; background: #a12b27; }
+body.abbo-redesign-preview #injury-guide .abbo-guide-steps h3 { font-size: 18px !important; line-height: 1.25; }
+body.abbo-redesign-preview #injury-guide .abbo-guide-steps p { font-size: 15px !important; line-height: 1.4; }
+#injury-guide .mt-11 { margin-top: 20px; }
+
+/* About */
+body.abbo-redesign-preview main > section#about { padding-top: 12px !important; }
+body.abbo-redesign-preview #about > div { max-width: 1200px; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 60px; }
+.abbo-about-left { display: flex; flex-direction: column; gap: 18px; }
+body.abbo-redesign-preview .abbo-founder-mark { display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-end; height: 270px; padding: 28px; border-radius: 18px; background: linear-gradient(140deg, #142b3e, #27465e); color: #fff; overflow: hidden; position: relative; }
+body.abbo-redesign-preview .abbo-founder-mark::before { content: ""; position: absolute; width: 290px; height: 290px; right: -95px; top: -110px; border: 1px solid rgba(255, 255, 255, .18); border-radius: 50%; }
+body.abbo-redesign-preview .abbo-founder-initials { position: relative; font: 700 92px/.85 Georgia, serif; letter-spacing: -.08em; color: #d3b879; margin-bottom: 28px; }
+body.abbo-redesign-preview .abbo-founder-mark-text { position: relative; display: flex; flex-direction: column; gap: 4px; }
+body.abbo-redesign-preview .abbo-founder-mark-text strong { font: 700 24px Georgia, serif; }
+body.abbo-redesign-preview .abbo-founder-mark-text span { font: 700 12px Arial, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: #d9e2e8; }
+.abbo-mini-stories { display: flex; flex-direction: column; gap: 9px; }
+.abbo-mini-kicker { color: #a12b27; font: 700 13px Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
+.abbo-mini-stories h3 { margin: -4px 0 4px; color: #142b3e; font: 700 25px/1.2 Georgia, serif; }
+.abbo-mini-story { margin: 0; padding: 14px 16px; border: 1px solid #e4dfd7; border-radius: 12px; background: #f8f6f2; }
+.abbo-mini-story blockquote { margin: 0; color: #25394b; font: italic 15px/1.45 Arial, sans-serif; }
+.abbo-mini-story figcaption { margin-top: 7px; color: #142b3e; font: 700 12px/1.3 Arial, sans-serif; }
+.abbo-founder-bio { color: #142b3e; }
+body.abbo-redesign-preview #about .abbo-founder-bio { font-size: 18px; line-height: 1.65; }
+body.abbo-redesign-preview #about .abbo-founder-bio p { margin: 0 0 .85em; }
+body.abbo-redesign-preview #about .abbo-founder-bio p:last-child { margin-bottom: 0; }
+body.abbo-redesign-preview #about .abbo-founder-bio + div { margin-top: -6px !important; padding-top: 12px !important; }
+body.abbo-redesign-preview .abbo-jd-label,
+body.abbo-redesign-preview .abbo-jd-school,
+body.abbo-redesign-preview .abbo-jd-location { display: block; }
+body.abbo-redesign-preview .abbo-jd-school { white-space: nowrap; }
+body.abbo-redesign-preview .abbo-jd-desktop,
+body.abbo-redesign-preview .abbo-ba-desktop { display: inline; }
+body.abbo-redesign-preview .abbo-jd-mobile,
+body.abbo-redesign-preview .abbo-ba-mobile { display: none; }
+body.abbo-redesign-preview .abbo-fl-mi-figure { width: 100%; margin: 2px 0 0; background: #fff; border-radius: 12px; }
+body.abbo-redesign-preview .abbo-fl-mi-figure img { display: block; width: 100%; height: auto; aspect-ratio: 2.25/1; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 22px rgba(20, 43, 62, .14); opacity: .9; }
+body.abbo-redesign-preview .abbo-fl-mi-figure figcaption { margin-top: 6px; color: #233b4e; font: 700 13px/1.3 Arial, sans-serif; letter-spacing: .04em; }
+
+/* Contact */
+body.abbo-redesign-preview #contact > div { max-width: 780px; gap: 16px; }
+body.abbo-redesign-preview #contact h2 { color: #fff; font: 700 clamp(36px, 3.7vw, 50px)/1.15 Georgia, serif; }
+body.abbo-redesign-preview #contact p { font-size: 19px !important; line-height: 1.5; }
+
+@media (max-width: 1050px) {
+  body.abbo-redesign-preview .abbo-accident-content > .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 900px) {
+  body.abbo-redesign-preview main > section { scroll-margin-top: 155px; }
+  body.abbo-redesign-preview .abbo-hero-content h1 { white-space: normal; max-width: 760px; }
+  body.abbo-redesign-preview .abbo-commitment-content { display: flex; flex-direction: column; gap: 28px; }
+  body.abbo-redesign-preview .abbo-commitment-content > .order-1 { order: 1; }
+  body.abbo-redesign-preview .abbo-consultation-figure { order: 2; width: 100%; }
+  body.abbo-redesign-preview .abbo-consultation-frame { height: min(52vw, 420px); }
+  body.abbo-redesign-preview #injury-guide .abbo-guide-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 820px) {
+  body.abbo-redesign-preview #about > div { display: flex; flex-direction: column; gap: 28px; }
+  body.abbo-redesign-preview #about > div > div:last-child { order: 1; }
+  body.abbo-redesign-preview .abbo-about-left { order: 2; }
+  body.abbo-redesign-preview .abbo-commitment-content { gap: 14px; }
+}
+
+@media (max-width: 680px) {
+  body.abbo-redesign-preview main > section:not(.abbo-hero) { padding-top: 10px !important; padding-bottom: 10px !important; }
+  body.abbo-redesign-preview main > section#about { padding-top: 10px !important; }
+  body.abbo-redesign-preview main > section:not(.abbo-hero):not(#contact) h2 { font-size: clamp(29px, 7vw, 36px) !important; }
+  body.abbo-redesign-preview .abbo-hero .abbo-hero-content { padding: 24px 20px 10px !important; }
+  body.abbo-redesign-preview .abbo-hero-content h1 { font-size: clamp(30px, 8.5vw, 38px); overflow-wrap: normal; }
+  body.abbo-redesign-preview .abbo-hero-content .abbo-hero-description p.abbo-hero-lead { font-size: 22px; }
+  body.abbo-redesign-preview .abbo-hero-content .abbo-hero-points li { font-size: 18px; }
+  body.abbo-redesign-preview .abbo-hero-support { grid-template-columns: 1fr; gap: 16px; margin-top: 22px; max-width: 100%; }
+  body.abbo-redesign-preview .abbo-hero-content .abbo-hero-callout { font-size: 17px; }
+  body.abbo-redesign-preview .abbo-hero-next .abbo-hero-action { width: 100%; justify-content: center; align-items: center; }
+  body.abbo-redesign-preview .abbo-hero-next .abbo-hero-action a.abbo-email-button { margin-inline: auto; align-self: center; }
+
+  body.abbo-redesign-preview .abbo-accident-content > .grid { grid-template-columns: 1fr; gap: 9px; margin-top: 16px; }
+  body.abbo-redesign-preview .abbo-accident-content > .grid > div { display: grid; grid-template-columns: 34px minmax(0, 1fr); align-items: start; align-content: start; column-gap: 10px; height: auto !important; min-height: 0 !important; padding: 12px 14px; border-radius: 12px; box-shadow: 0 5px 20px rgba(20, 43, 62, .04); }
+  body.abbo-redesign-preview .abbo-accident-content > .grid > div > div:first-child { width: 34px; height: 34px; }
+  body.abbo-redesign-preview .abbo-accident-content > .grid > div > div:first-child svg { width: 23px; height: 23px; }
+  body.abbo-redesign-preview .abbo-accident-content > .grid > div > div:nth-child(2) { min-width: 0; gap: 3px; }
+  body.abbo-redesign-preview .abbo-accident-content > .grid h3 { font-size: 17px !important; line-height: 1.25; margin: 0; }
+  body.abbo-redesign-preview .abbo-accident-content > .grid p { font-size: 15px !important; line-height: 1.35; margin: 0; }
+
+  body.abbo-redesign-preview .abbo-consultation-frame { height: clamp(250px, 70vw, 320px); }
+  body.abbo-redesign-preview .abbo-commitment-content a.abbo-email-button { align-self: center !important; margin-inline: auto !important; }
+
+  body.abbo-redesign-preview #injury-guide h2 { font-size: clamp(36px, 8.3vw, 43px) !important; }
+  body.abbo-redesign-preview #injury-guide .abbo-guide-steps { grid-template-columns: 1fr; gap: 9px; margin-top: 16px; align-items: start; }
+  body.abbo-redesign-preview #injury-guide .abbo-guide-steps > li { height: auto !important; min-height: 0 !important; padding: 12px 14px; grid-template-columns: 30px minmax(0, 1fr); column-gap: 10px; row-gap: 2px; align-self: start; }
+  body.abbo-redesign-preview #injury-guide .abbo-guide-steps > li > div { width: 30px; height: 30px; font-size: 12px; }
+  body.abbo-redesign-preview #injury-guide .abbo-guide-steps h3 { font-size: 17px !important; margin: 0; }
+  body.abbo-redesign-preview #injury-guide .abbo-guide-steps p { font-size: 15px !important; line-height: 1.35; margin: 0; }
+
+  body.abbo-redesign-preview .abbo-jd-desktop,
+  body.abbo-redesign-preview .abbo-ba-desktop { display: none; }
+  body.abbo-redesign-preview .abbo-jd-mobile,
+  body.abbo-redesign-preview .abbo-ba-mobile,
+  body.abbo-redesign-preview .abbo-degree-label,
+  body.abbo-redesign-preview .abbo-degree-school,
+  body.abbo-redesign-preview .abbo-degree-location { display: block; }
+  body.abbo-redesign-preview .abbo-degree-school { white-space: nowrap; }
+  body.abbo-redesign-preview .abbo-fl-mi-figure { width: min(100%, 360px); }
+
+  body.abbo-redesign-preview #contact h2 { font-size: clamp(31px, 8vw, 40px); }
+
+  body.abbo-scroll-demo .abbo-scroll-scene { background-position: center right; }
+  body.abbo-scroll-demo main > section::before { background: rgba(250, 248, 244, .84); }
+}
+
+@media (max-width: 900px) and (min-width: 681px) {
+  body.abbo-scroll-demo main > section::before { background: rgba(250, 248, 244, .79); }
+}
+
+@media (max-width: 380px) {
+  body.abbo-redesign-preview .abbo-hero-content h1 { font-size: 34px; }
+}
+
+@media (max-width: 340px) {
+  body.abbo-redesign-preview .abbo-hero-content h1 { font-size: 30px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.abbo-redesign-preview .abbo-accident-content > .grid > div { transition: none; }
+}
+
+/* ------------------------------------------------------------------
+   Cinematic scroll backdrop (see components/ScrollBackdrop.tsx).
+   The per-section cream veils above keep the copy readable.
+   ------------------------------------------------------------------ */
+.abbo-backdrop { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; background: #eef0ef; }
+.abbo-backdrop-layer { position: absolute; inset: 0; transform-origin: 50% 50%; will-change: opacity, transform; backface-visibility: hidden; contain: strict; }
+.abbo-backdrop-image { object-fit: cover; object-position: var(--scene-pos); filter: saturate(.86) contrast(1.04); }
+
+@media (max-width: 767px) {
+  .abbo-backdrop-image { object-position: var(--scene-pos-mobile); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .abbo-backdrop-layer { will-change: opacity; transform: none !important; }
+}

@@ -7,10 +7,10 @@ export const siteConfig = {
   description:
     "Abbo Law represents people injured through someone else's negligence — auto and motorcycle accidents, medical malpractice, premises liability, and wrongful death claims. Free consultation. No fees unless we win.",
   // TODO: replace with the real production domain before launch.
-  url: "https://www.example.com",
+  url: "https://abbo-law.netlify.app/",
   phoneDisplay: "947-224-0496",
   phoneHref: "tel:+19472240496",
-  email: "patrickabbo@gmail.com",
+  email: "mycase@abbolaw.com",
   state: "Florida",
   address: {
     street: "123 Main Street, Suite 000",

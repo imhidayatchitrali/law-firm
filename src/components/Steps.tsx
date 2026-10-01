@@ -5,7 +5,7 @@ import { steps } from "@/lib/content";
 
 export function Steps() {
   return (
-    <section className="bg-cream-alt py-20 md:py-24">
+    <section id="injury-guide" className="bg-cream-alt py-20 md:py-24">
       <Container>
         <div className="flex max-w-xl flex-col gap-3">
           <Eyebrow>Know Your Rights</Eyebrow>
