@@ -2,22 +2,22 @@ import Image from "next/image";
 import { ScrollBackdrop } from "@/components/ScrollBackdrop";
 import "./home.css";
 
-const practiceAreas = [
+const practiceAreas: {
+  title: string;
+  desc: string;
+  paths: string[];
+  circles?: [number, number, number][];
+  phrase?: string;
+}[] = [
   {
     title: "Wrongful Death Claims",
     desc: "With a wrongful death, compensation is not simply about covering expenses — it's about honoring what was lost and securing your family's future.",
     paths: ["M12 21s-8-4.7-8-10.3A4.7 4.7 0 0 1 12 7.2a4.7 4.7 0 0 1 8 3.5C20 16.3 12 21 12 21Z"],
   },
   {
-    title: "Auto Accidents",
-    desc: "Serious Injuries from Collisions involving cars and motor vehicles can bring medical bills, missed work, and questions about insurance coverage.",
-    paths: ["M4 11.5 12 4l8 7.5", "M6 10v10h12V10", "M10 20v-6h4v6"],
-  },
-  {
-    title: "Truck Accidents",
-    desc: "Serious Injuries due to Collisions involving commercial and freight vehicles.",
-    paths: ["M2 7h11v9H2z", "M13 10h4l3 3v3h-7z"],
-    circles: [[6.5, 17.5, 1.75], [16.5, 17.5, 1.75]],
+    title: "Auto & Truck Accidents",
+    desc: "Collisions involving cars, trucks, and commercial vehicles can cause Serious Injuries, medical bills, missed work, and insurance disputes.",
+    paths: ["M3 11l2-5h14l2 5v7H3z", "M3 11h18M6 18v2M18 18v2", "M6 14h2M16 14h2"],
   },
   {
     title: "Motorcycle Injury",
@@ -32,9 +32,15 @@ const practiceAreas = [
   },
   {
     title: "Pedestrian Accidents",
-    desc: "Serious Injuries to pedestrians Struck by vehicles.",
+    desc: "Serious Injuries to pedestrians",
+    phrase: "Struck by vehicles.",
     paths: ["M10.5 21l1.5-6-2-2 .5-4.5 3 1 1.5 3H17", "M11 13l-3.5 2.5", "M12.5 15L15 21"],
     circles: [[13, 4.5, 1.75]],
+  },
+  {
+    title: "Dog Bites",
+    desc: "Dog bites and attacks can cause Serious Injuries, scarring, emotional trauma, and medical expenses.",
+    paths: ["M5 17c0-2 2-3 3-5 1-2 4-3 6-1 1 2 2 3 4 4 3 4-1 7-4 5-2-1-3-1-5 0-3 1-5-1-4-3z"],
   },
 ];
 
@@ -50,7 +56,7 @@ const guideSteps = [
 const testimonials = [
   { quote: "They handled everything and kept me informed every step of the way. I couldn't have asked for a better team.", caseType: "Motor Vehicle Accident" },
   { quote: "From the first call, I felt like a priority, not just another case file.", caseType: "Slip & Fall" },
-  { quote: "Professional, responsive, and they fought hard for the outcome I deserved.", caseType: "Workplace Injury" },
+  { quote: "Professional, responsive, and they fought hard for the outcome I deserved.", caseType: "Motorcycle Accident" },
 ];
 
 export default function Home() {
@@ -68,13 +74,16 @@ export default function Home() {
               <li>We specialize in finding you THE BEST ATTORNEYS for your case, because finding GREAT Personal Injury Attorneys is not easy to do today.</li>
               <li>We will then connect you to them for evaluation and representation.</li>
               <li>When you contact us, your case is referred to our NETWORK OF ATTORNEYS so that they will handle your case.</li>
-              <li>Send us a brief email about the incident and where it happened to get started.</li>
             </ul>
           </div>
           <div className="abbo-hero-support">
-            <p className="abbo-hero-callout">Millions Recovered for our Clients.<br />No Fees Until We Win.</p>
+            <p className="abbo-hero-callout">
+              <span className="abbo-results-claim">Millions Recovered for our Clients.</span>
+              <br />
+              <span className="abbo-results-fee">No Fees Until We Win.</span>
+            </p>
             <div className="abbo-hero-next">
-              <p className="abbo-hero-callout">Injured?<br />Email us to connect with an attorney for evaluation.</p>
+              <p className="abbo-hero-callout">Injured?<br />Send us a brief email about the incident and where it happened to get started.</p>
               <div className="abbo-hero-action">
                 <a className="abbo-email-button abbo-email-outline" href="mailto:mycase@abbolaw.com">
                   <span className="abbo-email-address">mycase@abbolaw.com</span>
@@ -111,7 +120,10 @@ export default function Home() {
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <h3 className="font-serif text-lg font-semibold text-navy" style={{ fontSize: 20 }}>{area.title}</h3>
-                  <p className="text-sm text-ink-soft" style={{ fontSize: 24 }}>{area.desc}</p>
+                  <p className="text-sm text-ink-soft" style={{ fontSize: 24 }}>
+                    {area.desc}
+                    {area.phrase && <> <span className="abbo-pedestrian-phrase">{area.phrase}</span></>}
+                  </p>
                 </div>
               </div>
             ))}
@@ -156,8 +168,9 @@ export default function Home() {
           <div className="flex max-w-3xl flex-col gap-3">
             <span className="text-sm font-bold tracking-[0.14em] uppercase text-accent" style={{ fontSize: 20 }}>Know Your Rights</span>
             <h2 className="font-serif text-3xl font-bold text-navy md:text-4xl">What to Do After an Injury</h2>
-            <p className="text-ink-soft" style={{ fontSize: 24 }}>
-              The moments after an accident are overwhelming. These steps protect you and your case.
+            <p className="text-ink-soft abbo-rights-intro" style={{ fontSize: 24 }}>
+              <span className="abbo-rights-intro-sentence">The moments after an accident are overwhelming.</span>{" "}
+              <span className="abbo-rights-intro-sentence">These steps protect you and your case.</span>
             </p>
           </div>
           <ol className="abbo-guide-steps mt-12 grid list-none gap-8 sm:grid-cols-2 lg:grid-cols-3">
@@ -183,6 +196,7 @@ export default function Home() {
           <div className="abbo-about-left">
             <div className="abbo-founder-mark" role="img" aria-label="Patrick A. Abbo, founding attorney">
               <div className="abbo-founder-initials">PA</div>
+              <div className="abbo-founder-geography-label">Florida • Michigan</div>
               <div className="abbo-founder-mark-text">
                 <strong>Patrick A. Abbo</strong>
                 <span>Founding Attorney</span>
@@ -203,7 +217,7 @@ export default function Home() {
           <div className="flex flex-col gap-5" style={{ fontSize: 14 }}>
             <span className="text-sm font-bold tracking-[0.14em] uppercase text-accent" style={{ fontSize: 20 }}>Meet the founding Attorney</span>
             <h2 className="font-serif text-3xl font-bold text-navy md:text-4xl">Patrick A. Abbo</h2>
-            <p className="text-sm font-bold tracking-wide text-accent uppercase" style={{ fontSize: 14 }}>Member, Florida Bar and michigan bar</p>
+            <p className="text-sm font-bold tracking-wide text-accent uppercase abbo-bar-membership" style={{ fontSize: 14 }}>Member, Florida Bar and Michigan Bar</p>
             <div className="abbo-founder-bio">
               <p>Patrick Abbo BATTLES against the insurance companies every day. He KNOWS that all THEY care about are their RECORD PROFITS. They don&apos;t care about YOU.</p>
               <p>His experience has taught him how to FIND the type of Attorneys it takes to FIGHT the insurance companies so that YOU, can get the highest payment that YOU, deserve.</p>

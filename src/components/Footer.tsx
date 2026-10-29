@@ -19,7 +19,9 @@ export function Footer() {
               Florida and Michigan. Personal injury matters obtained through this website will be
               referred to other attorneys or law firms for evaluation and representation. Contacting
               Abbo Law or submitting information through this website does not create an
-              attorney-client relationship.
+              attorney-client relationship. Representation begins only after an attorney accepts
+              the matter and any required representation agreement is executed. Prior results do
+              not guarantee a similar outcome.
             </p>
             <p>
               Abbo Law | Troy, Michigan | Patrick Abbo, Esq. | Licensed in FL and MI | {" "}

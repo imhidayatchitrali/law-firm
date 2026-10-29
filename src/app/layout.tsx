@@ -4,6 +4,7 @@ import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { DesktopThemeControl } from "@/components/DesktopThemeControl";
 
 const lora = Lora({
   subsets: ["latin"],
@@ -116,6 +117,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <DesktopThemeControl />
       </body>
     </html>
   );
