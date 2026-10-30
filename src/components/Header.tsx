@@ -23,20 +23,16 @@ export function Header() {
           />
         </Link>
 
-        <div className="flex flex-1 items-center justify-center abbo-header-nav-wrap">
-          <div className="flex flex-col items-center justify-center gap-2 abbo-header-menu-group">
-            <nav className="flex items-center justify-center gap-6 text-base font-semibold text-navy abbo-header-nav" aria-label="Main navigation">
-              {navItems.map((item) => (
-                <Link key={item.href} href={item.href} className="underline-offset-4 transition-colors hover:text-accent hover:underline focus-visible:underline">
-                  {item.label}
-                </Link>
-              ))}
-            </nav>
-            <Link href="#injury-guide" className="abbo-guide-button abbo-header-cta">
-              What to Do After an Injury
+        <nav className="flex items-center justify-center gap-6 text-base font-semibold text-navy abbo-header-nav" aria-label="Main navigation">
+          {navItems.map((item) => (
+            <Link key={item.href} href={item.href} className="underline-offset-4 transition-colors hover:text-accent hover:underline focus-visible:underline">
+              {item.label}
             </Link>
-          </div>
-        </div>
+          ))}
+          <Link href="#injury-guide" className="abbo-guide-button abbo-guide-link abbo-guide-featured">
+            What to Do After an Injury
+          </Link>
+        </nav>
 
         <Link href={`mailto:${siteConfig.email}`} className="abbo-email-button abbo-header-contact">
           <span className="abbo-email-heading">Contact Us Now!</span>

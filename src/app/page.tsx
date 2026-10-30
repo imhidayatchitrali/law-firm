@@ -78,12 +78,19 @@ export default function Home() {
           </div>
           <div className="abbo-hero-support">
             <p className="abbo-hero-callout">
-              <span className="abbo-results-claim">Millions Recovered for our Clients.</span>
+              <span className="abbo-results-claim">
+                <span className="abbo-results-line-one">Millions Recovered</span>{" "}
+                <span className="abbo-results-line-two">for our Clients.</span>
+              </span>
               <br />
-              <span className="abbo-results-fee">No Fees Until We Win.</span>
+              <span className="abbo-results-fee">No Fees Until YOU Win.</span>
             </p>
             <div className="abbo-hero-next">
-              <p className="abbo-hero-callout">Injured?<br />Send us a brief email about the incident and where it happened to get started.</p>
+              <p className="abbo-hero-callout">
+                <span className="abbo-mobile-injured-label">Injured?</span>
+                <br />
+                Send us a brief email about the incident and where it happened to get started.
+              </p>
               <div className="abbo-hero-action">
                 <a className="abbo-email-button abbo-email-outline" href="mailto:mycase@abbolaw.com">
                   <span className="abbo-email-address">mycase@abbolaw.com</span>
@@ -196,7 +203,19 @@ export default function Home() {
           <div className="abbo-about-left">
             <div className="abbo-founder-mark" role="img" aria-label="Patrick A. Abbo, founding attorney">
               <div className="abbo-founder-initials">PA</div>
-              <div className="abbo-founder-geography-label">Florida • Michigan</div>
+              <div className="abbo-founder-logo-panel">
+                <Image
+                  src="/images/logo.png"
+                  alt="Abbo Law"
+                  width={537}
+                  height={403}
+                  className="abbo-founder-card-logo"
+                />
+              </div>
+              <div className="abbo-founder-geography-label">
+                <span className="abbo-geography-original">Florida Michigan</span>
+                <span className="abbo-geography-mobile-new">Florida Michigan</span>
+              </div>
               <div className="abbo-founder-mark-text">
                 <strong>Patrick A. Abbo</strong>
                 <span>Founding Attorney</span>
@@ -246,11 +265,11 @@ export default function Home() {
                 </span>
               </p>
             </div>
-            <figure className="abbo-fl-mi-figure">
-              <Image src="/images/fl-mi-skyline.webp" alt="Illustrative Miami Beach and Detroit skyline" width={1200} height={480} />
-              <figcaption>Florida • Michigan</figcaption>
-            </figure>
           </div>
+          <figure className="abbo-fl-mi-figure">
+            <Image src="/images/fl-mi-skyline.webp" alt="Illustrative Miami Beach and Detroit skyline" width={1200} height={480} />
+            <figcaption>Florida • Michigan</figcaption>
+          </figure>
         </div>
       </section>
 

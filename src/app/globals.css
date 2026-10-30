@@ -134,8 +134,8 @@ html {
     align-items: center;
     justify-content: center;
     padding: 8px 14px;
-    width: 210px !important;
-    min-height: 58px !important;
+    width: 210px;
+    min-height: 58px;
     border-radius: 999px;
     background: linear-gradient(180deg, #dc483b 0%, #c32d2b 100%);
     text-decoration: none;
@@ -205,7 +205,6 @@ html {
     position: relative;
     isolation: isolate;
     background: #f6f1eb;
-    min-height: 540px;
   }
 
   .abbo-hero > img {
@@ -496,10 +495,6 @@ html {
   }
 
   @media (max-width: 680px) {
-    .abbo-hero {
-      min-height: 420px;
-    }
-
     .abbo-hero-content {
       padding: 0 0 10px;
     }
