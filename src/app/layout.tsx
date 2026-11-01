@@ -1,25 +1,6 @@
 import type { Metadata, Viewport } from "next";
-import { Lora, Work_Sans } from "next/font/google";
-import "./globals.css";
 import { siteConfig } from "@/lib/site-config";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { DesktopThemeControl } from "@/components/DesktopThemeControl";
-
-const lora = Lora({
-  subsets: ["latin"],
-  variable: "--font-lora",
-  weight: ["500", "600", "700"],
-  style: ["normal", "italic"],
-  display: "swap",
-});
-
-const workSans = Work_Sans({
-  subsets: ["latin"],
-  variable: "--font-work-sans",
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-});
+import "./appearance.css";
 
 const title = `${siteConfig.name} | Personal Injury Attorneys`;
 
@@ -111,13 +92,10 @@ function LegalServiceJsonLd() {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${lora.variable} ${workSans.variable}`}>
-      <body className="abbo-redesign-preview abbo-scroll-demo flex min-h-screen flex-col bg-cream font-sans text-ink antialiased">
+    <html lang="en">
+      <body className="hve-web-active hve-edit-mode abbo-redesign-preview abbo-scroll-demo">
         <LegalServiceJsonLd />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
-        <DesktopThemeControl />
+        {children}
       </body>
     </html>
   );

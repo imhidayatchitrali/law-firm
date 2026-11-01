@@ -1,0 +1,110 @@
+body.abbo-redesign-preview .abbo-theme-preview {
+  display: flex !important;
+}
+
+@media (max-width: 900px) {
+  body.abbo-redesign-preview .abbo-theme-preview {
+    position: fixed;
+    z-index: 200;
+    right: 10px;
+    bottom: calc(10px + env(safe-area-inset-bottom));
+    align-items: center;
+    gap: 7px;
+    padding: 7px 9px;
+    border: 1px solid #c7cdd2;
+    border-radius: 10px;
+    background: #fff;
+    color: #142b3e;
+    box-shadow: 0 4px 16px #0002;
+    font: 600 11px Arial, sans-serif;
+  }
+
+  body.abbo-redesign-preview .abbo-theme-preview select {
+    border: 1px solid #aebbc4;
+    border-radius: 6px;
+    padding: 5px;
+    background: #fff;
+    color: #142b3e;
+    font: inherit;
+  }
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview {
+  background: #0c1721 !important;
+  color: #eaf0f5;
+  --abbo-accent: #ffb1a7;
+  --abbo-ink: #eef3f7;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview header.abbo-header-preview {
+  background: rgba(13, 26, 38, 0.97) !important;
+  border-bottom-color: #334858;
+  box-shadow: 0 5px 25px #0004;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-header-nav a {
+  color: #edf3f8 !important;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-scroll-demo main > section::before {
+  background: linear-gradient(
+    90deg,
+    rgba(9, 23, 35, 0.96),
+    rgba(9, 23, 35, 0.89) 60%,
+    rgba(9, 23, 35, 0.81)
+  ) !important;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview main h1,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview main h2,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview main h3,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview main p,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-hero-points li,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-mini-story blockquote,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview #about .text-navy {
+  color: #edf3f8 !important;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview main p,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-hero-points li,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-mini-story blockquote {
+  color: #d4e0e9 !important;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview main .text-accent,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-mini-kicker,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-bar-membership {
+  color: #ffb1a7 !important;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-scroll-demo .abbo-accident-content > .grid > div,
+html[data-abbo-desktop-theme="dark"] body.abbo-scroll-demo #injury-guide .abbo-guide-steps > li,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-mini-story,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-fl-mi-figure {
+  background: #172b3b !important;
+  border-color: #3d5365;
+  box-shadow: 0 8px 24px #0002;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-accident-content > .grid > div > div:first-child {
+  background: #4c2b30;
+  color: #ffb1a7;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-mini-story figcaption,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-consultation-disclosure,
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-fl-mi-figure figcaption {
+  color: #c4d3df;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-theme-preview {
+  background: #172b3b;
+  color: #edf3f8;
+  border-color: #597082;
+}
+
+html[data-abbo-desktop-theme="dark"] body.abbo-redesign-preview .abbo-theme-preview select {
+  background: #0d1e2c;
+  color: #edf3f8;
+  border-color: #597082;
+}
